@@ -59,7 +59,7 @@ const Board = () => {
     <div className="board-container">
       <div className="board">
         {board.split("").map((p, i) => (
-          <div className={"tile" + colorTile(i)}>{pieceCode[p]}</div>
+          <div className={"tile" + colorTile(i)} key={i}>{pieceCode[p]}</div>
         ))}
       </div>
     </div>
