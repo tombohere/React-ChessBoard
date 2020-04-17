@@ -39,12 +39,12 @@ const Board = () => {
   let toggle = true;
 
   useEffect(() => {
+    // fit game to fill viewport
     function handleResize() {
-      // fit game to fill viewport
-      var [game] = document.getElementsByClassName("board-container");
-      var units = window.innerWidth > window.innerHeight ? "vh" : "vw";
-      game.style.height = game.style.width = "96" + units;
-      game.style.fontSize = "10.34" + units;
+      let game = document.getElementById("board-container").style;
+      let units = window.innerWidth > window.innerHeight ? "vh" : "vw";
+      game.height = game.width = "96" + units;
+      game.fontSize = "10.34" + units;
     }
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -56,10 +56,12 @@ const Board = () => {
   };
 
   return (
-    <div className="board-container">
+    <div id="board-container">
       <div className="board">
         {board.split("").map((p, i) => (
-          <div className={"tile" + colorTile(i)} key={i}>{pieceCode[p]}</div>
+          <div className={"tile" + colorTile(i)} key={i}>
+            {pieceCode[p]}
+          </div>
         ))}
       </div>
     </div>
