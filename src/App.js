@@ -11,7 +11,7 @@ let board =
   "pppppppp" +
   "rnbqkbnr";
 
-let pieceCode = {
+const pCode = {
   R: "♜",
   N: "♞",
   B: "♝",
@@ -53,7 +53,7 @@ const Board = () => {
       <div className="board">
         {board.split("").map((p, i) => (
           <div className={"tile" + colorTile(i)} key={i}>
-            {pieceCode[p]}
+            {pCode[p]}
           </div>
         ))}
       </div>
