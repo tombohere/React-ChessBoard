@@ -28,9 +28,9 @@ let pieceCode = {
 };
 
 const App = () => (
-    <div className="App">
-      <Board />
-    </div>
+  <div className="App">
+    <Board />
+  </div>
 );
 
 const Board = () => {
@@ -46,10 +46,7 @@ const Board = () => {
     window.addEventListener("resize", handleResize);
   }, []);
 
-  const colorTile = n => {
-    // calculate if square is colored or not
-    return n % 2 ^ n / 8 % 2 < 1 ? " board-color" : "";
-  };
+  const colorTile = n => (n % 2 ^ ((n / 8) % 2 < 1) ? " board-color" : "");
 
   return (
     <div id="board-container">
