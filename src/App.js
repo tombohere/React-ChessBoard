@@ -42,10 +42,9 @@ const Board = () => {
     function handleResize() {
       // fit game to fill viewport
       var [game] = document.getElementsByClassName("board-container");
-      var tiles = document.getElementsByClassName("tile");
       var units = window.innerWidth > window.innerHeight ? "vh" : "vw";
       game.style.height = game.style.width = "96" + units;
-      for (var tile of tiles) tile.style.fontSize = "10.34" + units;
+      game.style.fontSize = "10.34" + units;
     }
     handleResize();
     window.addEventListener("resize", handleResize);

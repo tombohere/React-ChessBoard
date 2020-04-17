@@ -16,6 +16,7 @@
   transform: translate(-50%, -50%);
   height: 96vh;
   width: 96vh;
+  font-size: 10.34vw;
 }
 
 .board {
@@ -26,7 +27,6 @@
 }
 
 .tile {
-  font-size: 10.34vw;
   width: 100%;
   height: 100%;
   overflow: hidden;
