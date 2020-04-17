@@ -39,7 +39,7 @@ const Board = () => {
     function handleResize() {
       let game = document.getElementById("board-container").style;
       let units = window.innerWidth > window.innerHeight ? "vh" : "vw";
-      game.height = game.width = "96" + units;
+      game.height = game.width = "90" + units;
       game.fontSize = "10.34" + units;
     }
     handleResize();

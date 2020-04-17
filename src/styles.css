@@ -14,17 +14,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 96vh;
-  width: 96vh;
+  height: 90vh;
+  width: 90vh;
   font-size: 10.34vw;
-  line-height: 1.16em;
+  line-height: 1.1em;
 }
 
 .board {
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
-  border: 1px solid var(--boardColor);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
 .tile {
