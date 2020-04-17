@@ -27,17 +27,13 @@ let pieceCode = {
   " ": " "
 };
 
-const App = () => {
-  return (
+const App = () => (
     <div className="App">
       <Board />
     </div>
-  );
-};
+);
 
 const Board = () => {
-  let toggle = true;
-
   useEffect(() => {
     // fit game to fill viewport
     function handleResize() {
@@ -51,8 +47,8 @@ const Board = () => {
   }, []);
 
   const colorTile = n => {
-    toggle = n % 8 !== 0 ? !toggle : toggle;
-    return toggle ? " board-color" : "";
+    // calculate if square is colored or not
+    return n % 2 ^ n / 8 % 2 < 1 ? " board-color" : "";
   };
 
   return (
